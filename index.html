@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Karma</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav class="navbar">
-  <div class="logo" onclick="scrollToTop()">
+  <div class="logo">
     <img src="images/logo.png">
-    <span>Karma</span>
+    <span>Studio</span>
   </div>
   <div class="nav-links">
     <a href="#gallery">Gallery</a>
@@ -23,41 +24,55 @@
 </nav>
 
 <section class="hero">
-  <h1>Art That Speaks</h1>
-  <p>Colorful expressions inspired by culture & spirituality</p>
-  <button onclick="scrollToGallery()">Explore Gallery</button>
+  <div class="hero-content">
+    <h1>Healing Through Art</h1>
+    <p>Textured expressions inspired by culture & spirituality</p>
+    <button onclick="scrollToGallery()">Explore Gallery</button>
+  </div>
 </section>
 
-<section id="gallery" class="section">
-  <h2>Gallery</h2>
-  <div class="gallery">
+<section id="gallery" class="section fade-in">
+  <h2 class="title">Art Gallery</h2>
 
+  <div class="gallery">
     <div class="card">
       <img src="images/art2.png" onclick="openLightbox(this)">
-      <div class="overlay"><h3>Blood Pheasant</h3></div>
+      <div class="overlay">
+        <h3>Blood Pheasant</h3>
+        <p>Identity & pride</p>
+      </div>
     </div>
 
     <div class="card">
       <img src="images/art2.png" onclick="openLightbox(this)">
-      <div class="overlay"><h3>Twin Koi</h3></div>
+      <div class="overlay">
+        <h3>Twin Koi</h3>
+        <p>Balance & flow</p>
+      </div>
     </div>
 
     <div class="card">
       <img src="images/art3.png" onclick="openLightbox(this)">
-      <div class="overlay"><h3>Vajra</h3></div>
+      <div class="overlay">
+        <h3>Vajra</h3>
+        <p>Strength & truth</p>
+      </div>
     </div>
-
   </div>
 </section>
 
-<section id="about" class="section colorful">
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<section id="about" class="section fade-in">
   <div class="box">
-    <h2>About</h2>
+    <h2>About the Artist</h2>
     <p>Karma Yangchen Bhutia is a self-taught textured acrylic artist blending spirituality, culture and healing.</p>
   </div>
 </section>
 
-<section id="contact" class="section">
+<section id="contact" class="section fade-in">
   <div class="box contact">
     <h2>Contact</h2>
     <p>Email: karmaybhutia07@gmail.com</p>
@@ -66,14 +81,11 @@
   </div>
 </section>
 
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
-
 <footer>
-  <p>© Studio Karma</p>
+  <p>© Studio</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
