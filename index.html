@@ -11,59 +11,71 @@
 
 <body>
 
-<header class="header">
-  <h1>Studio Karma</h1>
-  <p class="tagline">Art • Calm • Craft</p>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2>Studio Karma</h2>
+  <div class="nav-links">
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<section class="hero section">
-  <div>
-    <h2>Where Art Meets Healing</h2>
-    <p>Luxury textured art inspired by spirituality and culture</p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Healing Through Art</h1>
+    <p>Spiritual textured acrylic art inspired by Sikkim</p>
+    <button onclick="scrollToGallery()">Explore Gallery</button>
   </div>
 </section>
 
-<section id="gallery" class="gallery section">
+<!-- GALLERY -->
+<section id="gallery" class="section">
   <h2 class="section-title">Art Gallery</h2>
 
   <div class="gallery-grid">
 
     <div class="gallery-item">
-      <img src="images/art1.png">
+      <img src="images/art1.png" onclick="openLightbox(this)">
       <div class="overlay">
         <h3>Blood Pheasant</h3>
-        <p>Symbol of resilience and identity</p>
+        <p>Identity & pride</p>
       </div>
     </div>
 
     <div class="gallery-item">
-      <img src="images/art2.png">
+      <img src="images/art2.png" onclick="openLightbox(this)">
       <div class="overlay">
         <h3>Twin Koi</h3>
-        <p>Balance and freedom</p>
+        <p>Balance & freedom</p>
       </div>
     </div>
 
     <div class="gallery-item">
-      <img src="images/art3.png">
+      <img src="images/art3.png" onclick="openLightbox(this)">
       <div class="overlay">
         <h3>Vajra</h3>
-        <p>Strength and truth</p>
+        <p>Strength & truth</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="about section">
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section about fade-in">
   <h2 class="section-title">About the Artist</h2>
-  <p>
-    Karma Yangchen Bhutia is a self-taught textured acrylic artist from Sikkim.
-    Her work blends spirituality, culture and healing.
-  </p>
+  <p>Karma Yangchen Bhutia is a self-taught textured acrylic artist blending spirituality, culture and healing.</p>
 </section>
 
-<section class="contact section">
+<!-- CONTACT -->
+<section id="contact" class="section contact fade-in">
   <h2 class="section-title">Contact</h2>
   <p>Email: karmaybhutia07@gmail.com</p>
   <p>Phone: 8597086153</p>
@@ -72,6 +84,8 @@
 <footer>
   <p>© Studio Karma</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
