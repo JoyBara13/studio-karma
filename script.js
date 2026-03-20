@@ -2,12 +2,24 @@ function scrollToGallery(){
   document.getElementById('gallery').scrollIntoView({behavior:'smooth'});
 }
 
-function openLightbox(img, text){
-  document.getElementById('lightbox').style.display='flex';
-  document.getElementById('lightbox-img').src=img.src;
-  document.getElementById('lightbox-text').innerText=text;
+function openLightbox(img){
+  const lb = document.getElementById('lightbox');
+  lb.style.display='flex';
+  document.getElementById('lightbox-img').src = img.src;
 }
 
 function closeLightbox(){
   document.getElementById('lightbox').style.display='none';
 }
+
+// scroll animation
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+faders.forEach(el=>observer.observe(el));
