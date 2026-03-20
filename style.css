@@ -1,84 +1,69 @@
 body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background: #f4efe9;
-  color: #2c2c2c;
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:#f5f0ea;
+  color:#222;
 }
 
-/* HEADER */
 .header {
-  text-align: center;
-  padding: 40px;
+  text-align:center;
+  padding:60px 20px;
 }
 
 .header h1 {
-  font-size: 42px;
-  font-weight: 500;
+  font-family:'Playfair Display', serif;
+  font-size:48px;
 }
 
 .tagline {
-  font-style: italic;
-  letter-spacing: 2px;
+  font-family:'Great Vibes', cursive;
+  font-size:24px;
 }
 
-/* GRID LAYOUT */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 40px;
+.hero {
+  height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(to right, #e6d5c3, #cdb39c);
 }
 
-/* CARDS */
-.card {
-  background: #d2b8a3;
-  padding: 20px;
-  border-radius: 8px;
+.hero-text {
+  text-align:center;
+  max-width:600px;
 }
 
-.card h3 {
-  margin-top: 0;
+.gallery {
+  padding:60px 20px;
 }
 
-.theme {
-  font-weight: bold;
-  margin-top: 10px;
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
 }
 
-/* MESSAGE */
-.message {
-  grid-column: span 1;
-  text-align: center;
-  padding: 20px;
+.gallery-grid img {
+  width:100%;
+  border-radius:12px;
+  transition:0.3s;
 }
 
-.author {
-  margin-top: 10px;
-  font-style: italic;
+.gallery-grid img:hover {
+  transform:scale(1.05);
 }
 
-/* CONTACT */
-.contact {
-  background: #d2b8a3;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-/* ABOUT */
 .about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 40px;
-  gap: 20px;
+  padding:60px 20px;
+  background:#fff;
 }
 
-.about-text, .studio {
-  background: #ffffff;
-  padding: 30px;
+.contact {
+  padding:40px;
+  text-align:center;
 }
 
-/* FOOTER */
 footer {
-  text-align: center;
-  padding: 20px;
+  text-align:center;
+  padding:20px;
 }
