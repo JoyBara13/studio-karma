@@ -17,32 +17,31 @@
 </header>
 
 <section class="hero">
-  <div class="hero-text">
-    <h2>Healing Through Art</h2>
-    <p>
-      Every symbol carries a story. Every layer carries emotion.
-      A journey of culture, healing and spiritual expression.
-    </p>
+  <div class="hero-content">
+    <h2>Where Art Meets Healing</h2>
+    <p>Luxury textured art inspired by spirituality and culture</p>
+    <button onclick="scrollToGallery()">View Gallery</button>
   </div>
 </section>
 
-<section class="gallery">
+<section id="gallery" class="gallery">
   <h2>Art Gallery</h2>
   <div class="gallery-grid">
-    <img src="images/art1.jpg">
-    <img src="images/art2.jpg">
-    <img src="images/art3.jpg">
+    <img src="images/art1.png" onclick="openLightbox(this, 'Blood Pheasant - Symbol of resilience')">
+    <img src="images/art2.png" onclick="openLightbox(this, 'Twin Koi - Balance and freedom')">
+    <img src="images/art3.png" onclick="openLightbox(this, 'Vajra - Strength and truth')">
   </div>
 </section>
 
+<div id="lightbox">
+  <span onclick="closeLightbox()">✖</span>
+  <img id="lightbox-img">
+  <p id="lightbox-text"></p>
+</div>
+
 <section class="about">
-  <div>
-    <h2>About the Artist</h2>
-    <p>
-      Karma Yangchen Bhutia is a self-taught textured acrylic artist from Sikkim.
-      Her work blends spirituality, culture and healing.
-    </p>
-  </div>
+  <h2>About the Artist</h2>
+  <p>Karma Yangchen Bhutia is a self-taught artist blending spirituality with textured acrylic art.</p>
 </section>
 
 <section class="contact">
@@ -53,6 +52,8 @@
 <footer>
   <p>© Studio Karma</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
